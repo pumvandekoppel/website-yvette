@@ -34,7 +34,7 @@ header {
     margin-bottom:auto;
     box-sizing: border-box;
     overflow: hidden;
-    z-index: 0;
+    z-index: 2;
 }
 
 /* index */
