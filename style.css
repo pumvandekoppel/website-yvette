@@ -20,7 +20,8 @@ body {
 }
 
 header {
-    flex: 0 1 75px;
+    flex: 0 0 75px;
+    height: 75px;
 }
 
 main {
@@ -46,7 +47,6 @@ header {
     color: rgb(44, 44, 44);
     background-color: #f1f1f1;
     margin-bottom:auto;
-    box-sizing: border-box;
 }
 
 /* index */
@@ -113,15 +113,21 @@ main.work.postcards {
 
 main.about {
     display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 
 }
 
 main.about img {
     display: none;
+    flex: 0 0 600px;
+    max-width: 200px;
+    padding: 30px 5vw;
 }
 
 main.about p.info {
-    flex: 0 1 250px;
+    flex: 0 0 250px;
+    padding: 30px 5vw;
 }
 
 p.info {
@@ -181,6 +187,23 @@ footer.about button {
 }
 
 /* adjustment for bigger screens */
+@media (min-width : 375px) and (min-height : 775px) {
+    main.about {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        font-size: 0.9em;
+    
+    }
+    
+    main.about img {
+        display: flex;
+        flex: 1 1 600px;
+        max-width: 300px;
+        padding: 55px 5vw;
+    }
+}
+
 @media (min-width : 500px) {
 
     main.work.index div.stack a img {
@@ -216,7 +239,7 @@ footer.about button {
         flex: 1 1 400px;
         max-height: 400px;
         min-width: 300px;
-        padding: 55px 5vw;
+        padding: 55px 0vw;
     }
 }
 
@@ -246,14 +269,15 @@ footer.about button {
         flex: 1 1 600px;
         max-height: 400px;
         min-width: 650px;
-        padding: 55px 5vw;
+        padding: 15px 5vw;
+        padding-top:60px;
     }
 
     main.about div.infotext {
         flex: 1 1 400px;
         max-height: 400px;
         min-width: 300px;
-        padding: 55px 5vw;
+        padding: 25px 0vw;
     }
 
     footer button {
