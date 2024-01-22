@@ -1,15 +1,16 @@
+/* general */
 
 html {
     overflow: hidden;
-    height: 100%;
-    width: 90vw;
 }
 
 body {
-    height: 100%;
+    height: 100vh;
     width: 90vw;
     display: flex;
-    flex-flow: column;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
     padding-left: 5vw;
     padding-right: 5vw;
     margin: 0;
@@ -18,73 +19,90 @@ body {
     background-color: #f1f1f1;
 }
 
+header {
+    flex: 0 1 75px;
+}
+
+main {
+    display: flex;
+    flex: 1 1 calc(100vh - 150px);
+    justify-content: center;
+    align-items: center;
+}
+
+footer {
+    flex: 0 1 75px;
+}
+
 a {
     text-decoration: none;
-    color: rgb(81, 97, 113);
+    color: hsl(210, 16%, 38%);
 }
 
 /* top */
 
 header {
     width: 100%;
-    height: 120px;
     color: rgb(44, 44, 44);
     background-color: #f1f1f1;
-    max-height: 70vh;
     margin-bottom:auto;
     box-sizing: border-box;
-    overflow: hidden;
 }
 
 /* index */
 
-main.work#index {
-    max-height: 80vh;
-    max-width: 90vw;
+main.work.index {
+    display: flex;
+    flex: 1 1 calc(100vh - 150px);
     justify-content: center;
     align-items: center;
-    margin-left: auto;
-    margin-right: auto;
 }
 
-main.work#index img {
+main.work.index div.stack a img {
+    flex: 1 1 calc(100vh - 150px);
+    justify-content: center;
+    max-height: calc(100vh - 150px);
+    padding-top: 25px;
+    padding-bottom: 25px;
+    display: flex;
+    flex: 1 1 calc(100vh - 150px);
     justify-content: center;
     align-items: center;
-    max-width: 55vw;
-    object-fit: contain;
-    box-sizing: border-box;
-    text-align: center;
-    overflow: hidden;
 }
 
 /* work */
 
-main.work#newspapers {
-    max-height: 80vh;
-    max-width: 90vw;
-    justify-content: center;
-    align-items: center;
+main.work.newspapers {
+    /* height: 80vh; */
     margin-left: auto;
     margin-right: auto;
-    margin-top: 11vh;
 }
 
-main.work#newspapers img {
-    justify-content: center;
-    align-items: center;
-    max-height: 70vh;
-    max-width: 80vw;
+main.work.newspapers div.slide {
+    display: none;
+}
+
+main.work.newspapers div.slide#first {
+    display: flex;
+}
+
+main.work.newspapers img {
+    flex: 1 1 calc(100vh - 150px);
     object-fit: contain;
     box-sizing: border-box;
-    text-align: center;
     overflow: hidden;
+    height: 80vh;
+    max-width: 90vw ;
+    padding-top: 25px;
+    padding-bottom: 25px;
 }
 
-main.work#drawings {
-    justify-content: center;
-    align-items: center;
-    max-height: 60vh;
-    max-width: 70vw;
+main.work.newspapers .horizontal img {
+    width: 90vw;
+}
+
+main.work.postcards {
+    height: 60vmax;
     object-fit: contain;
     box-sizing: border-box;
     text-align: center;
@@ -93,59 +111,30 @@ main.work#drawings {
 
 /* about */
 
-main#about img {
-    height: 20vh;
+main.about {
+    display: flex;
+
 }
 
-main.work div.slide {
+main.about img {
     display: none;
 }
 
-/* main.work div#first {
-    display: block;
-} */
-
-main#about {
-    flex-direction: row;
-    max-height: 80vh;
-    max-width: 90vw;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    margin-top: auto;
-
-}
-
-main#about img {
-    display: none;
-    max-width:50vw;
-    max-height: 50vh;
-    margin-top: auto;
-    box-sizing: border-box;
-    margin-left: auto;
-    padding-left: 5vw;
-    padding-right: 5vw;
-    overflow: hidden;
+main.about p.info {
+    flex: 0 1 250px;
 }
 
 p.info {
-    padding-top: 1px;
-    margin-left: 5vw;
-    margin-right: 5vw;
-    font-size: 0.9em;
-    container-name: tekst;
+    margin-top: 0;
 }
 
 
 /* footer */
 
 footer {
-    /* flex-flow: row; */
-    height: 10vh;
+    background-color: #f1f1f1;
     width: 90vw;
     margin-top: auto;
-    margin-bottom: 10px ;
-    flex-shrink: 0;
 }
 
 footer p {
@@ -162,7 +151,7 @@ footer p#commaspace, p#year{
 
 footer button {
     float: right;
-    background-color: rgb(161, 160, 160);
+    background-color: hsl(0, 1%, 63%);
     text-decoration: none;
     text-align: center;
     border: none;
@@ -179,50 +168,160 @@ footer button {
     vertical-align: middle;
 }
 
-footer button#y h3{
+footer button h3 {
+    color: hsl(210, 16%, 38%);
+}
+
+footer .index, .newspapers .about button h3{
     font-size: larger;
 }
 
-footer button#back {
+footer.about button {
     background-color: #f1f1f1;
 }
 
 /* adjustment for bigger screens */
-@media (min-width: 600px) {
+@media (min-width : 500px) {
+
+    main.work.index div.stack a img {
+        flex: 1 1 calc(100vh - 400px);
+        object-fit: contain;
+        box-sizing: border-box;
+        overflow: hidden;
+        padding-top: 25px;
+        padding-bottom: 25px;
+    }
+
+    main.about {
+        display: flex;
+        flex-flow: column;
+        max-width: 600px;
+        max-height: 400px;
+        margin-left: auto;
+        margin-right: auto;
+        justify-content: center;
+        align-items: flex-start;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    main.about img {
+        display: flex;
+        flex: 1 1 600px;
+        max-width: 400px;
+        padding: 55px 5vw;
+    }
+
+    main.about div.infotext {
+        flex: 1 1 400px;
+        max-height: 400px;
+        min-width: 300px;
+        padding: 55px 5vw;
+    }
+}
+
+@media (min-width: 700px) {
     body {
         font-size: 1em;
     }
 
-    main#about {
-        display: flex;
-        max-width: 1000px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    main#about div.imagebox {
-        display: flex;
-        order: 1;
-        justify-content: space-between;
-        align-items: space-between;
-        margin-right: auto;
-        margin-bottom: 5vw;
-        max-width: 500px;
-    }
-
-    main#about div.textbox {
-        display: flex;
-        max-width: 500px;
-        order: 2;
-        margin-left: auto;
-    }
-
-    main#about img {
-        display: flex;
-    }
-    
-
     p.info {
         font-size: 1em;
+    }
+
+    main.about {
+        display: flex;
+        flex-flow: column;
+        max-width: 1000px;
+        max-height: 400px;
+        margin-left: auto;
+        margin-right: auto;
+        justify-content: center;
+        align-items: flex-start;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    main.about img {
+        flex: 1 1 600px;
+        max-height: 400px;
+        min-width: 650px;
+        padding: 55px 5vw;
+    }
+
+    main.about div.infotext {
+        flex: 1 1 400px;
+        max-height: 400px;
+        min-width: 300px;
+        padding: 55px 5vw;
+    }
+
+    footer button {
+        float: right;
+        background-color: hsl(0, 1%, 63%);
+        text-decoration: none;
+        text-align: center;
+        border: none;
+        border-radius: 100%;
+        margin-right: 5vw;
+        margin-top: 3px;
+        width: 39px;
+        height: 39px;
+        line-height: 39px;
+        display: inline-flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        vertical-align: middle;
+    }
+}
+
+@media (min-width: 1100px) {
+
+    main.about {
+        display: flex;
+        flex-flow: row;
+        max-width: 1000px;
+        max-height: 400px;
+        margin-left: auto;
+        margin-right: auto;
+        justify-content: center;
+        align-items: center;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    main.about img {
+        flex: 1 1 600px;
+        max-height: 400px;
+        padding-right: 55px;
+        padding-left: 5vw;
+    }
+
+    main.about div.infotext {
+        flex: 1 1 400px;
+        max-height: 400px;
+        min-width: 300px;
+        padding-left: 55px;
+        padding-right: 5vw;
+    }
+
+    footer button {
+        float: right;
+        background-color: hsl(0, 1%, 63%);
+        text-decoration: none;
+        text-align: center;
+        border: none;
+        border-radius: 100%;
+        margin-right: 5vw;
+        margin-top: 0px;
+        width: 45px;
+        height: 45px;
+        line-height: 45px;
+        display: inline-flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        vertical-align: middle;
     }
 }
