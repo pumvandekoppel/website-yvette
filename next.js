@@ -10,12 +10,14 @@ if (sessionStorage["rememberPreviousSlide"]) {
 if (document.getElementsByTagName('main')[0].getElementsByTagName('div')[0].classList.contains('slide')) {
 
     var slides = document.getElementsByClassName("slide")
-
+    
     // first slide
     if (i == 0) {
         slides[0].setAttribute('id', "first")
     }
-    slides[(i % slides.length)].setAttribute('id', "first")
+    else if (i!== 0) {
+        slides[(i % slides.length)].setAttribute('id', "first")
+    }
     //
 
     // first footer
@@ -26,11 +28,12 @@ if (document.getElementsByTagName('main')[0].getElementsByTagName('div')[0].clas
     //
 
     document.getElementById("first").style.display = 'flex'
+}
 
     function next() {
+        document.getElementById("first").removeAttribute('id')
         nextSlide()
         nextFooter()
-        slides[(i % slides.length)].removeAttribute('id')
         i++
         var index = String(i)
         sessionStorage.setItem("rememberPreviousSlide", index)
@@ -67,5 +70,3 @@ if (document.getElementsByTagName('main')[0].getElementsByTagName('div')[0].clas
         var year = slides[(i + 1) % slides.length].dataset.year
         document.getElementsByTagName('footer')[0].getElementsByTagName('p')[2].innerHTML = year
     }
-
-}
