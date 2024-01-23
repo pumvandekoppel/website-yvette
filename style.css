@@ -206,6 +206,11 @@ footer.about button {
 
     }
 
+    main.about div.text {
+        max-width: 333px;
+
+    }
+
     main.about img {
         display: flex;
         width: 100%;
