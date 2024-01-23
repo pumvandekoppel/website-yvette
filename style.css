@@ -22,6 +22,7 @@ body {
 header {
     flex: 0 0 75px;
     height: 75px;
+    /* background-color: red; */
 }
 
 main {
@@ -47,6 +48,7 @@ header {
     color: rgb(44, 44, 44);
     background-color: #f1f1f1;
     margin-bottom:auto;
+    /* background-color: red; */
 }
 
 /* index */
@@ -115,25 +117,23 @@ main.about {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    /* background-color: green; */
 
 }
+
+/* main.about div.image {
+    /* background-color: aqua; */
+/* } */ 
 
 main.about img {
     display: none;
-    flex: 0 0 600px;
-    max-width: 200px;
-    padding: 30px 5vw;
 }
 
-main.about p.info {
-    flex: 0 0 250px;
-    padding: 30px 5vw;
+main.about div.text {
+    flex: 1 1 auto;
+    max-width: 333px;
+    /* background-color: magenta; */
 }
-
-p.info {
-    margin-top: 0;
-}
-
 
 /* footer */
 
@@ -141,6 +141,7 @@ footer {
     background-color: #f1f1f1;
     width: 90vw;
     margin-top: auto;
+    /* background-color: red; */
 }
 
 footer p {
@@ -176,6 +177,7 @@ footer button {
 
 footer button h3 {
     color: hsl(210, 16%, 38%);
+    padding-bottom: 3px;
 }
 
 footer .index, .newspapers .about button h3{
@@ -187,24 +189,45 @@ footer.about button {
 }
 
 /* adjustment for bigger screens */
-@media (min-width : 375px) and (min-height : 775px) {
+@media ((min-width : 375px) and (min-height : 775px)) {
+    
     main.about {
         display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        font-size: 0.9em;
-    
+        flex-flow: column;
+        max-width: 600px;
+        max-height: 400px;
+        margin-left: auto;
+        margin-right: auto;
+        justify-content: center;
+        align-items: center;
+        padding-top: 0;
+        padding-bottom: 0;
+        /* background-color: green; */
+
     }
-    
+
     main.about img {
         display: flex;
-        flex: 1 1 600px;
-        max-width: 300px;
-        padding: 55px 5vw;
+        width: 100%;
+        height: auto;
+    }
+    
+    main.about div.image {
+        /* background-color: aqua; */
+        display: flex;
+        flex: 0 1 auto;
+        max-width: 333px;
+        padding-bottom: 25px;
+    }
+
+    main.about div.text {
+        
+        padding-top: 25px;
+        flex: 1 1 auto;
     }
 }
 
-@media (min-width : 500px) {
+@media (min-width : 500px) and (min-height : 775px) {
 
     main.work.index div.stack a img {
         flex: 1 1 calc(100vh - 400px);
@@ -226,24 +249,22 @@ footer.about button {
         align-items: flex-start;
         padding-top: 0;
         padding-bottom: 0;
+        /* background-color: green; */
+
     }
 
-    main.about img {
+    main.about div.image {
         display: flex;
-        flex: 1 1 600px;
-        max-width: 400px;
-        padding: 55px 5vw;
+        flex: 1 1 auto;
     }
 
-    main.about div.infotext {
-        flex: 1 1 400px;
-        max-height: 400px;
-        min-width: 300px;
-        padding: 55px 0vw;
+    main.about div.text {
+        flex: 0 0 300px;
+
     }
 }
 
-@media (min-width: 700px) {
+@media (min-width: 700px) and (min-height : 775px) {
     body {
         font-size: 1em;
     }
@@ -263,21 +284,18 @@ footer.about button {
         align-items: flex-start;
         padding-top: 0;
         padding-bottom: 0;
+        /* background-color: green; */
+
     }
 
-    main.about img {
-        flex: 1 1 600px;
-        max-height: 400px;
-        min-width: 650px;
-        padding: 15px 5vw;
-        padding-top:60px;
+    main.about div.image {
+        display: flex;
+        flex: 1 1 auto;
+
     }
 
-    main.about div.infotext {
-        flex: 1 1 400px;
-        max-height: 400px;
-        min-width: 300px;
-        padding: 25px 0vw;
+    main.about div.text {
+        flex: 1 1 auto;
     }
 
     footer button {
@@ -300,35 +318,42 @@ footer.about button {
     }
 }
 
-@media (min-width: 1100px) {
+    footer button h3{
+        font-size: 1.5em;
+        padding-bottom: 5px;
+    }
+
+@media (min-width: 1200px) and (min-height : 775px){
 
     main.about {
         display: flex;
         flex-flow: row;
-        max-width: 1000px;
-        max-height: 400px;
-        margin-left: auto;
+        width: 2500px;
+        /* margin-left: auto;
         margin-right: auto;
         justify-content: center;
         align-items: center;
         padding-top: 0;
         padding-bottom: 0;
-    }
+        width: 2000px;
+        background-color: green; */
+    } 
 
-    main.about img {
-        flex: 1 1 600px;
-        max-height: 400px;
-        padding-right: 55px;
-        padding-left: 5vw;
+    main.about div.image { 
+    /*    display: flex;
+        flex: 0 0 auto;
+        padding-right: 25px;
+        height: 392px;
+        width: 1000px;
+*/
+        padding-right: 36px;
+        min-width: 667px;
     }
-
-    main.about div.infotext {
-        flex: 1 1 400px;
-        max-height: 400px;
-        min-width: 300px;
-        padding-left: 55px;
-        padding-right: 5vw;
-    }
+*/
+    main.about div.text {
+        flex: 1 1 auto;
+        padding-left: 25px;
+    } 
 
     footer button {
         float: right;
