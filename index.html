@@ -1,44 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Yvette Taminiau</title>
-    <link href='https://fonts.googleapis.com/css?family=Neuton' rel='stylesheet'>
-    <link rel="stylesheet" id="pagestyle" href="style.css">
-</head>
+    <link
+      href="https://fonts.googleapis.com/css?family=Neuton"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" id="pagestyle" href="style.css" />
+  </head>
 
-<body>
-
+  <body>
     <header>
-        <h1>
-            <a href="index.html">
-                <important>Yvette Taminiau</important>
-            </a>
-        </h1>
+      <a href="index.html"><button><h3>&nbsp;</h3></button></a>
+      <h1>Yvette Taminiau</h1>
     </header>
 
-    <main class="work index" onclick="">
-  
-        <div class="stack" data-title="Newspapers" data-year="2007-2019">
-            <a href="newspapers.html"><img src="/assets/stack.jpg" alt="picture of a pile of painted newspapers / foto van stapel beschilderde kranten"></a>
-        </div>
+    <main class="work index">
+      <div
+        class="stack slide"
+        id="first"
+        data-title="Newspapers"
+        data-year="2007 - 2019"
+        data-dimensions="&nbsp;"
+        data-sold="false"
+      >
+        <a href="newspapers.html"
+          ><img
+            src="/assets/stack.jpg"
+            alt="picture of a pile of painted newspapers / foto van stapel beschilderde kranten"
+        /></a>
+      </div>
 
-        <!-- <div class="stack" data-title="Postcards" data-year="">
-            <img src="/assets/" alt="picture of a pile of postcards / foto van stapel ansichtkaarten">
-        </div> -->
-
+      <div
+        class="stack slide"
+        id="postcards"
+        data-title="Postcards"
+        data-year="2023"
+        data-dimensions="&nbsp;"
+        data-sold="false"
+      >
+        <a href="postcards.html"
+          ><img
+            src="/assets/ansichtkaarten/ansichtkaarten/stack-postcards.jpg"
+            alt="picture of a pile of postcards / foto van stapel ansichtkaarten"
+        /></a>
+      </div>
     </main>
 
-    <footer class="index">
-        <p>Newspapers</p>
+    <footer class="index" id="hidethisfooter">
+        <p>
+          <i><span id="title"></span></i>
+          ,&nbsp;
+          <span id="year"></span>
+          &nbsp;
+          <span id="dimensions"></span>
+        </p>
         <a>
-            <button>
-                <h3><a href="newspapers.html">&rarr;</h3></a>
-            </button>
+          <h3><span id="nav"><span id="left" onclick="previous()">&nbsp;<&nbsp;</span><span id="middle">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span id="right" onclick="next()">&nbsp;>&nbsp;</span></span></h3>
         </a>
-    </footer>
+      </footer>
     <script src="next.js"></script>
-</body>
-
+    <script src="hide.js"></script>
+  </body>
 </html>

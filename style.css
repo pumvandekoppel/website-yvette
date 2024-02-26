@@ -1,4 +1,4 @@
-/* general */
+
 
 html {
     overflow: hidden;
@@ -14,16 +14,9 @@ body {
     padding-left: 5vw;
     padding-right: 5vw;
     margin: 0;
-    font-family: Georgia, "Neuton", "Charis SIL", Utopia, "URW Bookman L", serif;
+    font-family: /* Georgia , */ "Neuton", "Charis SIL", Utopia, "URW Bookman L", serif;
     font-size: 0.9em;
     background-color: #f1f1f1;
-}
-
-header {
-    flex: 0 0 75px;
-    height: 75px;
-    display: none;
-    /* background-color: red; */
 }
 
 main {
@@ -46,12 +39,54 @@ a {
 /* top */
 
 header {
+    flex: 0 0 75px;
+    height: 75px;
+    display: flex;
     width: 100%;
     color: rgb(44, 44, 44);
     background-color: #f1f1f1;
-    margin-bottom:auto;
-    /* background-color: red; */
+    margin-bottom: auto;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
 }
+
+button {
+    background-color: hsl(0, 1%, 63%);
+    text-decoration: none;
+    text-align: center;
+    border: none;
+    border-radius: 100%;
+    margin-left: 20px;
+    width: 34px;
+    height: 34px;
+    line-height: 33px;
+    justify-content: center;
+    align-items: center;
+
+    cursor: grab;
+}
+
+button h3 {
+    color: hsl(210, 16%, 38%);
+    padding-bottom: 3px;
+    margin-top: -2px;
+}
+
+.index, .newspapers .about button h3{
+    font-size: larger;
+}
+
+.about button {
+    background-color: #f1f1f1;
+}
+
+header h1 {
+    flex: 75%;
+    text-align: right;
+    padding-right: 2vw;
+}
+
 
 /* index */
 
@@ -73,7 +108,34 @@ main.work.index div.stack a img {
     padding-bottom: 0;
 }
 
+main.work.index div.stack#postcards a img {
+    flex: 1 1 calc(100vh - 400px);
+    object-fit: contain;
+    box-sizing: border-box;
+    overflow: hidden;
+    height: 50vh;
+    max-width: 50vw;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+/* index */
+
+main.work.index div.slide {
+    display: none;
+}
+
+main.work.index div.slide#first {
+    display: flex;
+}
+
 /* work */
+
+main.work {
+    cursor: zoom-in;
+}
+
+/* newspapers */
 
 main.work.newspapers {
     /* height: 80vh; */
@@ -104,6 +166,8 @@ main.work.newspapers .horizontal img {
     width: 90vw;
 }
 
+/* postcards */
+
 main.work.postcards {
     height: 60vmax;
     object-fit: contain;
@@ -112,13 +176,42 @@ main.work.postcards {
     overflow: hidden;
 }
 
+main.work.postcards {
+    /* height: 80vh; */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+main.work.postcards div.slide {
+    display: none;
+}
+
+main.work.postcards div.slide#first {
+    display: flex;
+}
+
+main.work.postcards img {
+    flex: 1 1 calc(100vh - 150px);
+    object-fit: contain;
+    box-sizing: border-box;
+    overflow: hidden;
+    height: 80vh;
+    max-width: 90vw ;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
 /* about */
 
 main.about {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    padding-top: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 600px;
+    max-height: 400px;
+    justify-content: center;
+    align-items: center;
     /* background-color: green; */
 
 }
@@ -129,6 +222,8 @@ main.about {
 
 main.about img {
     display: none;
+    width: 256px;
+    height: auto;
 }
 
 main.about div.text {
@@ -140,60 +235,111 @@ main.about div.text {
 /* footer */
 
 footer {
+    flex: 0 0 75px;
     background-color: #f1f1f1;
     width: 90vw;
     margin-top: auto;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: baseline;
     /* background-color: red; */
 }
 
+footer span#nav {
+    margin-bottom: 20px;
+}
+
 footer p {
-    float: left;
     padding:0;
     margin-left: 5vw;
     vertical-align:bottom;
 }
 
-footer p#commaspace, p#year{
+footer p#comma, p#year{
     margin-left:0;
     padding: 0;
 }
 
-footer button {
-    float: right;
-    background-color: hsl(0, 1%, 63%);
-    text-decoration: none;
-    text-align: center;
-    border: none;
-    border-radius: 100%;
-    margin-right: 5vw;
-    margin-top: 6px;
-    width: 33px;
-    height: 33px;
-    line-height: 32px;
-    display: inline-flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    vertical-align: middle;
+footer h3 {
+    vertical-align: center;
+    padding-right: 2vw;
 }
 
-footer button h3 {
-    color: hsl(210, 16%, 38%);
-    padding-bottom: 3px;
+footer p {
+    margin-bottom: 40px;
 }
 
-footer .index, .newspapers .about button h3{
-    font-size: larger;
+footer nav {
+    user-select: none;
+    -webkit-user-select: none;
 }
 
-footer.about button {
-    background-color: #f1f1f1;
+footer span#left {
+    cursor: w-resize;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+footer span#middle {
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+footer span#right {
+    cursor: e-resize;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+footer.about span#middle {
+    cursor: w-resize;
 }
 
 /* adjustment for bigger screens */
-@media ((min-width : 375px) and (min-height : 775px)) {
+@media (min-width : 375px) {
     
     main.about {
+        display: flex;
+        flex-direction: column;
+        max-width: 600px;
+        max-height: 400px;
+        margin-left: auto;
+        margin-right: auto;
+        justify-content: center;
+        align-items: center;
+        /* background-color: green; */
+    }
+
+    main.about div.text {
+        max-width: 333px;
+
+    }
+
+    main.about img {
+        display: flex;
+        width: 100%;
+        height: auto;
+    }
+    
+    main.about div.image {
+        /* background-color: aqua; */
+        display: flex;
+        flex: 0 1 auto;
+        max-width: 333px;
+    }
+
+    main.about div.text {
+        
+        flex: 1 1 auto;
+    }
+}
+
+@media ((min-width : 375px) and (min-height : 750px)) {
+    
+    main.about {
+
+        font-size: 0.9em;
         display: flex;
         flex-flow: column;
         max-width: 600px;
@@ -202,9 +348,6 @@ footer.about button {
         margin-right: auto;
         justify-content: center;
         align-items: center;
-        padding-top: 175px;
-        padding-bottom: 0;
-        /* background-color: green; */
 
     }
 
@@ -224,12 +367,9 @@ footer.about button {
         display: flex;
         flex: 0 1 auto;
         max-width: 333px;
-        padding-bottom: 25px;
     }
 
     main.about div.text {
-        
-        padding-top: 25px;
         flex: 1 1 auto;
     }
 }
@@ -243,10 +383,6 @@ footer.about button {
         overflow: hidden;
     }  */
 
-    header {
-        display: flex;
-    }
-
     main.about {
         display: flex;
         flex-flow: column;
@@ -256,8 +392,6 @@ footer.about button {
         margin-right: auto;
         justify-content: center;
         align-items: flex-start;
-        padding-top: 0;
-        padding-bottom: 0;
         /* background-color: green; */
 
     }
@@ -291,8 +425,6 @@ footer.about button {
         margin-right: auto;
         justify-content: center;
         align-items: flex-start;
-        padding-top: 0;
-        padding-bottom: 0;
         /* background-color: green; */
 
     }
@@ -307,27 +439,9 @@ footer.about button {
         flex: 1 1 auto;
     }
 
-    footer button {
-        float: right;
-        background-color: hsl(0, 1%, 63%);
-        text-decoration: none;
-        text-align: center;
-        border: none;
-        border-radius: 100%;
-        margin-right: 5vw;
-        margin-top: 3px;
-        width: 36px;
-        height: 36px;
-        line-height: 35px;
-        display: inline-flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        vertical-align: middle;
-    }
 }
 
-    footer button h3{
+    button h3{
         font-size: 1.5em;
         padding-bottom: 5px;
     }
@@ -364,22 +478,20 @@ footer.about button {
         padding-left: 25px;
     } 
 
-    footer button {
-        float: right;
+    button {
         background-color: hsl(0, 1%, 63%);
         text-decoration: none;
         text-align: center;
         border: none;
         border-radius: 100%;
-        margin-right: 5vw;
-        margin-top: 0px;
+        margin-left: 13px;
+        margin-top: 15px;
         width: 40px;
         height: 40px;
         line-height: 39px;
-        display: inline-flex;
-        flex-direction: column;
         justify-content: center;
         align-items: center;
         vertical-align: middle;
+        cursor: grab;
     }
 }
