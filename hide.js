@@ -1,4 +1,4 @@
-var hidden = new Boolean(true);
+var hidden = new Boolean(false);
 
 function hide() {
     if (hidden == false) {

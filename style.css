@@ -108,17 +108,6 @@ main.work.index div.stack a img {
     padding-bottom: 0;
 }
 
-main.work.index div.stack#postcards a img {
-    flex: 1 1 calc(100vh - 400px);
-    object-fit: contain;
-    box-sizing: border-box;
-    overflow: hidden;
-    height: 50vh;
-    max-width: 50vw;
-    padding-top: 0;
-    padding-bottom: 0;
-}
-
 /* index */
 
 main.work.index div.slide {

@@ -54,6 +54,8 @@ if (document.getElementsByTagName('main')[0].getElementsByTagName('div')[0].clas
         slides[(i % slides.length)].style.display = 'none'
         slides[(i + 1) % slides.length].style.display = 'flex'
         slides[(i + 1) % slides.length].setAttribute('id', "first")
+        // slides[(i + 1) % slides.length].setAttribute('onclick', "hide()")
+
     }
 
     function nextFooter() {
