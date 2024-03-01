@@ -5,7 +5,7 @@ html {
 }
 
 body {
-    height: 100vh;
+    height: 100dvh;
     width: 90vw;
     display: flex;
     flex-flow: column nowrap;
@@ -21,7 +21,7 @@ body {
 
 main {
     display: flex;
-    flex: 1 1 calc(100vh - 150px);
+    flex: 1 1 calc(100dvh - 150px);
     justify-content: center;
     align-items: center;
 }
@@ -92,17 +92,17 @@ header h1 {
 
 main.work.index {
     display: flex;
-    flex: 1 1 calc(100vh - 150px);
+    flex: 1 1 calc(100dvh - 150px);
     justify-content: center;
     align-items: center;
 }
 
 main.work.index div.stack a img {
-    flex: 1 1 calc(100vh - 400px);
+    flex: 1 1 calc(100dvh - 400px);
     object-fit: contain;
     box-sizing: border-box;
     overflow: hidden;
-    height: 80vh;
+    height: 80dvh;
     max-width: 90vw;
     padding-top: 0;
     padding-bottom: 0;
@@ -127,7 +127,7 @@ main.work {
 /* newspapers */
 
 main.work.newspapers {
-    /* height: 80vh; */
+    /* height: 80dvh; */
     margin-left: auto;
     margin-right: auto;
 }
@@ -141,11 +141,11 @@ main.work.newspapers div.slide#first {
 }
 
 main.work.newspapers img {
-    flex: 1 1 calc(100vh - 150px);
+    flex: 1 1 calc(100dvh - 150px);
     object-fit: contain;
     box-sizing: border-box;
     overflow: hidden;
-    height: 80vh;
+    height: 80dvh;
     max-width: 90vw ;
     padding-top: 25px;
     padding-bottom: 25px;
@@ -166,7 +166,7 @@ main.work.postcards {
 }
 
 main.work.postcards {
-    /* height: 80vh; */
+    /* height: 80dvh; */
     margin-left: auto;
     margin-right: auto;
 }
@@ -180,11 +180,11 @@ main.work.postcards div.slide#first {
 }
 
 main.work.postcards img {
-    flex: 1 1 calc(100vh - 150px);
+    flex: 1 1 calc(100dvh - 150px);
     object-fit: contain;
     box-sizing: border-box;
     overflow: hidden;
-    height: 80vh;
+    height: 80dvh;
     max-width: 90vw ;
     padding-top: 25px;
     padding-bottom: 25px;
@@ -366,7 +366,7 @@ footer.about span#middle {
 @media (min-width : 500px) and (min-height : 775px) {
 
     /* main.work.index div.stack a img {
-        flex: 1 1 calc(100vh - 400px);
+        flex: 1 1 calc(100dvh - 400px);
         object-fit: contain;
         box-sizing: border-box;
         overflow: hidden;
