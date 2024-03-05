@@ -13,7 +13,9 @@
 
   <body>
     <header>
-      <a href="index.html"><button><h3>&nbsp;</h3></button></a>
+      <a href="index.html"
+        ><button><h3>&nbsp;</h3></button></a
+      >
       <h1>Yvette Taminiau</h1>
     </header>
 
@@ -23,7 +25,7 @@
         id="first"
         id="newspaperstack"
         data-title="Newspapers"
-        data-year="2007 - 2019"
+        data-year=""
         data-dimensions="&nbsp;"
         data-sold="false"
       >
@@ -38,7 +40,7 @@
         class="stack slide"
         id="postcardstack"
         data-title="Postcards"
-        data-year="2023"
+        data-year=""
         data-dimensions="&nbsp;"
         data-sold="false"
       >
@@ -51,17 +53,21 @@
     </main>
 
     <footer class="index" id="hidethisfooter">
-        <p>
-          <i><span id="title"></span></i>
-          ,&nbsp;
-          <span id="year"></span>
-          &nbsp;
-          <span id="dimensions"></span>
-        </p>
-        <a>
-          <h3><span id="nav"><span id="left" onclick="previous()">&nbsp;<&nbsp;</span><span id="middle">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span id="right" onclick="next()">&nbsp;>&nbsp;</span></span></h3>
-        </a>
-      </footer>
+      <h2 id="description">
+        <i><span id="title"></span></i>
+        &nbsp;
+        <span id="year"></span>
+        &nbsp;
+        <span id="dimensions"></span>
+      </h2>
+      <a>
+        <h2>
+          <span id="nav">
+            <span id="right" onclick="next()">&nbsp;<u>></u>&nbsp;</span>
+          </span>
+        </h2>
+      </a>
+    </footer>
     <script src="next.js"></script>
     <script src="hide.js"></script>
   </body>

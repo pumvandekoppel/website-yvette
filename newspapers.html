@@ -16,7 +16,7 @@
     <header id="hidethisheader">
       <a href="about.html"><button><h3>y</h3></button></a>
       <h1>
-        <a href="index.html">Newspapers</a>
+        <a onclick="history.back()">Newspapers</a>
       </h1>
     </header>
 
@@ -290,15 +290,15 @@
     </main>
 
     <footer class="newspapers" id="hidethisfooter">
-      <p>
+      <h2 id="description">
         <i><span id="title"></span></i>
         ,&nbsp;
         <span id="year"></span>
         <!-- &nbsp;-&nbsp; -->
         <span id="dimensions"></span>
-      </p>
+      </h2>
       <a>
-      <h3><span id="left" onclick="previous()">&nbsp;<&nbsp;</span><span id="middle">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span id="right" onclick="next()">&nbsp;>&nbsp;</span></h3>
+      <h2><span id="nav"><span id="left" onclick="previous()">&nbsp;<&nbsp;</span><span id="middle">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span id="right" onclick="next()">&nbsp;>&nbsp;</span></span></h2>
     </a>
     </footer>
     <script src="hide.js"></script>

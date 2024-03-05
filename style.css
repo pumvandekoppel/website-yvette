@@ -34,6 +34,7 @@ footer {
 a {
     text-decoration: none;
     color: hsl(210, 16%, 38%);
+    cursor: pointer;
 }
 
 /* top */
@@ -107,8 +108,6 @@ main.work.index div.stack a img {
     padding-top: 0;
     padding-bottom: 0;
 }
-
-/* index */
 
 main.work.index div.slide {
     display: none;
@@ -239,24 +238,28 @@ footer span#nav {
     margin-bottom: 20px;
 }
 
-footer p {
+footer h2, footer h3 {
     padding:0;
     margin-left: 5vw;
     vertical-align:bottom;
 }
 
-footer p#comma, p#year{
+footer p#comma, footer p#year{
     margin-left:0;
     padding: 0;
 }
 
-footer h3 {
+footer h3, footer h2 {
     vertical-align: center;
     padding-right: 2vw;
 }
 
-footer p {
+footer h3, footer h2 {
     margin-bottom: 40px;
+}
+
+footer h2#description {
+    font-weight: initial;
 }
 
 footer nav {
