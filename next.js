@@ -35,6 +35,11 @@ if (document.getElementsByTagName('main')[0].getElementsByTagName('div')[0].clas
 
     function next() {
         document.getElementById("first").removeAttribute('id')
+        // remove blinking after first click
+        var blink = document.getElementById("blink_me")
+        if(typeof blink !== 'undefined' && blink !== null) {
+            document.getElementById("blink_me").removeAttribute('id')
+        }
         nextSlide()
         nextFooter()
         nextSold()

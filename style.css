@@ -26,11 +26,6 @@ main {
     align-items: center;
 }
 
-footer {
-    flex: 0 0 75px;
-    height: 75px;
-}
-
 a {
     text-decoration: none;
     color: hsl(210, 16%, 38%);
@@ -50,6 +45,7 @@ header {
     flex-direction: row;
     justify-content: space-between;
     align-items: baseline;
+    padding-top: 5px;
 }
 
 button {
@@ -58,7 +54,7 @@ button {
     text-align: center;
     border: none;
     border-radius: 100%;
-    margin-left: 20px;
+    margin-left: 7px;
     width: 34px;
     height: 34px;
     line-height: 33px;
@@ -70,8 +66,8 @@ button {
 
 button h3 {
     color: hsl(210, 16%, 38%);
-    padding-bottom: 3px;
-    margin-top: -2px;
+    padding-bottom: 0px;
+    margin-top: 0px;
 }
 
 .index, .newspapers .about button h3{
@@ -116,6 +112,23 @@ main.work.index div.slide {
 main.work.index div.slide#first {
     display: flex;
 }
+
+#blink_me {
+    animation: blink-animation 2s steps(3, start) infinite;
+    -webkit-animation: blink-animation 2s steps(3, start) infinite;
+  }
+  
+@keyframes blink-animation {
+    to {
+      visibility: hidden;
+    }
+  }
+
+@-webkit-keyframes blink-animation {
+    to {
+      visibility: hidden;
+    }
+  }
 
 /* work */
 
@@ -225,8 +238,10 @@ main.about div.text {
 footer {
     flex: 0 0 75px;
     background-color: #f1f1f1;
+    height: 75px;
     width: 90vw;
     margin-top: auto;
+    padding-bottom: 15px;
     display: flex;
     justify-content: space-between;
     flex-direction: row;
@@ -435,7 +450,8 @@ footer.about span#middle {
 
     button h3{
         font-size: 1.5em;
-        padding-bottom: 5px;
+        padding-bottom: 0px;
+        margin-bottom: 0;
     }
 
 @media (min-width: 1200px) and (min-height : 775px){
@@ -477,10 +493,10 @@ footer.about span#middle {
         border: none;
         border-radius: 100%;
         margin-left: 13px;
-        margin-top: 15px;
+        margin-top: -13px;
+        padding-bottom: 0px;
         width: 40px;
         height: 40px;
-        line-height: 39px;
         justify-content: center;
         align-items: center;
         vertical-align: middle;
