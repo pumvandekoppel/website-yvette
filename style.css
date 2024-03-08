@@ -484,6 +484,7 @@ footer.about span#middle {
     main.about div.text {
         flex: 1 1 auto;
         padding-left: 25px;
+        margin-top: 103px;
     } 
 
     button {
