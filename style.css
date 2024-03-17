@@ -140,8 +140,13 @@ main.work {
 
 main.work.newspapers {
     /* height: 80dvh; */
+    height: 80vmax;
+    object-fit: contain;
+    box-sizing: border-box;
+    text-align: center;
     margin-left: auto;
     margin-right: auto;
+    overflow: hidden;
 }
 
 main.work.newspapers div.slide {
@@ -175,10 +180,6 @@ main.work.postcards {
     box-sizing: border-box;
     text-align: center;
     overflow: hidden;
-}
-
-main.work.postcards {
-    /* height: 80dvh; */
     margin-left: auto;
     margin-right: auto;
 }
